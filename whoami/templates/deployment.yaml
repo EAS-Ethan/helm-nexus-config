@@ -33,7 +33,7 @@ spec:
             value: Hi Ethan
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: wouterm/helloworld
+          image: "wouterm/helloworld"
           imagePullPolicy: Always
           ports:
             - name: http
