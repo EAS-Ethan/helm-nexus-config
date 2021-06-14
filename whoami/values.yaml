@@ -4,15 +4,7 @@
 
 replicaCount: 1
 
-image:
-  repository: wouterm/helloworld
-  pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
 
-imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -35,6 +27,8 @@ securityContext: {}
   # readOnlyRootFilesystem: true
   # runAsNonRoot: true
   # runAsUser: 1000
+deployment:
+  image: wouterm/helloworld
 
 service:
   type: ClusterIP
