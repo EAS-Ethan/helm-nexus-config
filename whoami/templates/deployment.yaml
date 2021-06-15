@@ -20,17 +20,14 @@ spec:
       labels:
         {{- include "whoami.selectorLabels" . | nindent 8 }}
     spec:
-      {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
-          - env:
+          env:
             - name: MSG
-              value: Hi Ethan
+              value: you suck
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: wouterm/helloworld:latest
