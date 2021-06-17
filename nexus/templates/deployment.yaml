@@ -33,9 +33,6 @@ spec:
           command: ["/bin/sh"]
           name: sidecar1
           resources: {}
-          volumeMounts:
-            - name: var-logs
-              mountPath: /var/log
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
