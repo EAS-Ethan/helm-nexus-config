@@ -34,7 +34,7 @@ spec:
           name: sidecar1
           resources: {}
           volumeMounts:
-            - name: varlogs
+            - name: var-logs
               mountPath: /var/log
         - name: {{ .Chart.Name }}
           securityContext:
