@@ -28,13 +28,14 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
-       - image: busybox
-        command: ["/bin/sh"]
-        name: sidecar-container1
-        resources: {}
-        volumeMounts:
-          - name: var-logs
-            mountPath: /var/log
+        
+        - image: busybox
+          command: ["/bin/sh"]
+          name: sidecar1
+          resources: {}
+          volumeMounts:
+            - name: varlogs
+              mountPath: /var/log
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
