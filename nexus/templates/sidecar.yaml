@@ -5,5 +5,5 @@ metadata:
 spec:
   containers:
   - name: sidecar
-    image: busybox
+    image: node
     command: ["/bin/sh"]
