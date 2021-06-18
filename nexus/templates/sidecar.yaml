@@ -6,4 +6,4 @@ spec:
   containers:
   - name: sidecar
     image: busybox
-    args: [/bin/sh]
+    command: ["/bin/sh"]
