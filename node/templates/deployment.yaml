@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "nexus.fullname" . }}
+  name: {{ include "node.fullname" . }}
   labels:
-    {{- include "nexus.labels" . | nindent 4 }}
+    {{- include "node.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "nexus.selectorLabels" . | nindent 6 }}
+      {{- include "node.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "nexus.selectorLabels" . | nindent 8 }}
+        {{- include "node.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "nexus.serviceAccountName" . }}
+      serviceAccountName: {{ include "node.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -34,15 +34,19 @@ spec:
           image: {{ .Values.deployment.image }}
           imagePullPolicy: {{ .Values.deployment.pullPolicy }}
           ports:
-            - name: httpcd 
+            - name: http
               containerPort: {{ .Values.deployment.port }}
               protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-        - image: busybox
-          imagePullPolicy: {{ .Values.deployment.pullPolicy }}
-          name: sidecar1
-          resources: {}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
