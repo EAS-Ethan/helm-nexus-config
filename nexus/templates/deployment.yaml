@@ -22,8 +22,12 @@ spec:
         - containerPort: 8081
           name: http
           protocol: TCP
-      - image: busybox
+      - args:
+        - sh
+        - /script.sh
+        image: busybox
         imagePullPolicy: Always
+        command: []
         name: sidecar1
         resources: {}
         tty: true
