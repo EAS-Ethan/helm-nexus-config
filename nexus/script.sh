@@ -1,1 +1,1 @@
-sh ./script2.sh
+sh /scripts/script2.sh
