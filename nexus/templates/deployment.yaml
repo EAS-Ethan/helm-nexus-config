@@ -24,7 +24,7 @@ spec:
           protocol: TCP
       - args:
         - sh
-        - /script.sh
+        - /scripts/script.sh
         image: busybox
         imagePullPolicy: Always
         command: []
@@ -32,7 +32,7 @@ spec:
         resources: {}
         tty: true
         volumeMounts:
-        - mountPath: /
+        - mountPath: /scripts
           name: script
       volumes:
       - name: script
