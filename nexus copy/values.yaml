@@ -54,6 +54,7 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: nexus.easlab.co.uk
+      http:
       paths:
         - path: /
           pathType: ImplementationSpecific
