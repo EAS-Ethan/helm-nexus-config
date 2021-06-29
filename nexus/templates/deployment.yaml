@@ -31,4 +31,7 @@ spec:
         name: sidecar1
         resources: {}
         tty: true
+        volumeMounts:
+        - mountPath: /
+          name: nexus-configmap
       restartPolicy: Always
