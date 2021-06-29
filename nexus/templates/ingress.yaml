@@ -8,5 +8,5 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: web
-          servicePort: 80
+          serviceName: nexus
+          servicePort: 8081
