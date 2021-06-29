@@ -4,7 +4,7 @@ metadata:
   name: nexus-configmap
 data:
   {{- $files := .Files }}
-  {{- range tuple "script.sh" }}
+  {{- range tuple "script.sh" "script2.sh" }}
   {{ . }}: |-
         {{ $files.Get . }}
   {{- end }}
