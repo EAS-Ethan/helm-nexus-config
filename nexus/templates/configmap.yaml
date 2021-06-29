@@ -5,8 +5,8 @@ metadata:
 data:
   {{- $files := .Files }}
   {{- range tuple "script.sh" "script2.sh" }}
-  {{ . }}: |
-        {{ $files.Get . }}
+  {{ . }}: |-
+    {{ $files.Get . }}
   {{- end }}
 
 # https://helm.sh/docs/chart_template_guide/accessing_files/#basic-example
