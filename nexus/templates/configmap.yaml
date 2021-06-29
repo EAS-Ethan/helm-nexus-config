@@ -3,4 +3,10 @@ kind: ConfigMap
 metadata:
   name: nexus-configmap
 data:
-  script.sh: echo hello world
+  {{- $files := .Files }}
+  {{- range tuple "script.sh" }}
+  {{ . }}: |-
+        {{ $files.Get . }}
+  {{- end }}
+
+# https://helm.sh/docs/chart_template_guide/accessing_files/#basic-example
