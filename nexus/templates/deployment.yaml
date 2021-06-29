@@ -22,4 +22,9 @@ spec:
         - containerPort: 8081
           name: http
           protocol: TCP
+      - image: busybox
+        imagePullPolicy: Always
+        name: sidecar1
+        resources: {}
+        tty: true
       restartPolicy: Always
