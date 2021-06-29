@@ -33,5 +33,9 @@ spec:
         tty: true
         volumeMounts:
         - mountPath: /
+          name: script
+      volumes:
+      - name: script
+        configMap:
           name: nexus-configmap
       restartPolicy: Always
