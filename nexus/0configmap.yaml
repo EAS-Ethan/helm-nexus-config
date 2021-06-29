@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: nexus-configmap
   namespace: default
-data: 
+data:
   script.sh: echo hello world
