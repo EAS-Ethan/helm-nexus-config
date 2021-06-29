@@ -1,12 +1,12 @@
 apiVersion: extensions/v1beta1
-  kind: Ingress
-  metadata:
-    name: nexus
-  spec:
-    rules:
-    - host: {{ .Values.ingress.hostname }}
-      http:
-        paths:
-        - backend:
-            serviceName: web
-            servicePort: 80
+kind: Ingress
+metadata:
+  name: nexus
+spec:
+  rules:
+  - host: {{ .Values.ingress.hostname }}
+    http:
+      paths:
+      - backend:
+          serviceName: web
+          servicePort: 80
