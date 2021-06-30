@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: nexus-configmap
 data:
-  groovy.sh: pwd
+  groovy.sh: echo bye
   script.sh: echo hello 
   
