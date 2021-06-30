@@ -18,6 +18,9 @@ spec:
       - image: sonatype/nexus3
         imagePullPolicy: Never
         name: nexus
+        volumeMounts:
+        - mountPath: /opt/sonatype
+          name: nexus
         ports:
         - containerPort: 8081
           name: http
@@ -36,6 +39,8 @@ spec:
           name: script
         - mountPath: /groovyScripts
           name: groovy
+        - mountPath: /opt/sonatype
+          name: nexus
       volumes:
       - name: script
         configMap:

@@ -3,8 +3,8 @@ kind: ConfigMap
 metadata:
   name: groovy-configmap
 data:
-  docker.groovy: {{ .Files.Get "docker.groovy"}} 
-  golang.groovy: {{ .Files.Get "golang.groovy"}} 
-  ldap.groovy: {{ .Files.Get "ldap.groovy"}} 
-  npm.groovy: {{ .Files.Get "npm.groovy"}} 
+  docker.groovy: {{ .Files.Get "/scripts/docker.groovy"}} 
+  golang.groovy: {{ .Files.Get "/scripts/golang.groovy"}} 
+  ldap.groovy: {{ .Files.Get "/scripts/ldap.groovy"}} 
+  npm.groovy: {{ .Files.Get "/scripts/npm.groovy"}} 
   
