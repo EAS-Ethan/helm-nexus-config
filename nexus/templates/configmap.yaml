@@ -3,5 +3,6 @@ kind: ConfigMap
 metadata:
   name: nexus-configmap
 data:
+  groovy.sh: sh /scripts/script2.sh
   script.sh: echo hello world
-  groovy.sh: cat apple.txt 
+  
