@@ -8,5 +8,5 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  storageClassName: vsphere-csi-sc
+  storageClassName: default
   volumeMode: Filesystem
