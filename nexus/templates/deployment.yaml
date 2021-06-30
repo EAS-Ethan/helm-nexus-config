@@ -26,7 +26,7 @@ spec:
         - sh
         - /scripts/script.sh
         - sh
-        - /scripts/groovy.sh
+        - /groovy.sh
         image: busybox
         imagePullPolicy: Never
         command: []
