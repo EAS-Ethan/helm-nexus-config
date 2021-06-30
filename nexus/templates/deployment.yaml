@@ -48,7 +48,7 @@ spec:
       - name: groovy
         configMap:
           name: groovy-configmap
-      - name: vol1
+      - name: nexus
         persistentVolumeClaim:
           claimName: nexus
       restartPolicy: Always
