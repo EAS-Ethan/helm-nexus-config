@@ -3,6 +3,5 @@ kind: ConfigMap
 metadata:
   name: nexus-configmap
 data:
-  groovy.sh: echo bye
-  script.sh: echo hello 
+  script.sh: {{ .Files.Get "script2.sh"}} 
   
