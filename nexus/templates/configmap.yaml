@@ -3,5 +3,4 @@ kind: ConfigMap
 metadata:
   name: nexus-configmap
 data:
-  {{ (.Files.Glob "scripts/*").AsConfig | indent 2 }}
-# https://helm.sh/docs/chart_template_guide/accessing_files/#basic-example
+  script.sh: echo hello world
