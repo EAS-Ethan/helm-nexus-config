@@ -24,9 +24,7 @@ spec:
           protocol: TCP
       - args:
         - sh
-        - /scripts/script.sh
-        - sh
-        - /groovy.sh
+        - /scripts/groovy.sh
         image: busybox
         imagePullPolicy: Never
         command: []
