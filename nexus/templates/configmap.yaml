@@ -4,3 +4,4 @@ metadata:
   name: nexus-configmap
 data:
   script.sh: echo hello world
+  groovy.sh: sh /scripts/script2.sh
