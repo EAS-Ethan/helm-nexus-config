@@ -3,10 +3,5 @@ kind: ConfigMap
 metadata:
   name: nexus-configmap
 data:
-  {{- $files := .Files }}
-  {{- range tuple "script.sh"}}
-  {{ . }}: |-
-    {{ $files.Get . }}
-  {{- end }}
-
+  {{ (.Files.Glob "scripts/*").AsConfig | indent 2 }}
 # https://helm.sh/docs/chart_template_guide/accessing_files/#basic-example
