@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nexus-helpers
+data:
+  addUpdateScript.groovy: |- {{  .Files.Get "scripts/helpers/addUpdateScript.groovy" | nindent 4 }}
+  grapeConfig.xml: |- {{  .Files.Get "scripts/helpers/grapeConfig.xml" | nindent 4 }}

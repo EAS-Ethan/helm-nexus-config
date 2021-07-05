@@ -31,6 +31,8 @@ spec:
           name: groovy
         - mountPath: /config/shell
           name: shell
+        - mountPath: /config/helpers
+          name: helpers
         ports:
         - containerPort: 8081
           name: http
@@ -39,6 +41,10 @@ spec:
       - name: groovy
         configMap:
           name: nexus-groovy
+          defaultMode: 0777
+      - name: helpers
+        configMap:
+          name: nexus-helpers
           defaultMode: 0777
       - name: shell
         configMap:
