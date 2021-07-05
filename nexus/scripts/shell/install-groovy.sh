@@ -6,4 +6,4 @@ exec cd /opt/sonatype/nexus & \
     chmod a+x "/root/.sdkman/bin/sdkman-init.sh"  && \
     source "/root/.sdkman/bin/sdkman-init.sh"
 
-exec sdk install groovy
+sdk install groovy
