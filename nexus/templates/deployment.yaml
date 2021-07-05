@@ -17,11 +17,12 @@ spec:
       containers:
       - image: sonatype/nexus3
         imagePullPolicy: Never
+        command: ["sh", "/scripts/start-nexus-repository-manager.sh"]
         name: nexus
         volumeMounts:
         - mountPath: /nexus-data
           name: nexus-data
-        - mountPath: /opt/sonatype
+        - mountPath: /scripts
           name: start-script
         - mountPath: /config/scripts
           name: groovy
