@@ -19,6 +19,8 @@ spec:
         imagePullPolicy: Never
         name: nexus
         volumeMounts:
+        - mountPath: /nexus-data
+          name: nexus-data
         - mountPath: /opt/sonatype
           name: start-script
         - mountPath: /config/scripts
@@ -33,9 +35,11 @@ spec:
       - name: groovy
         configMap:
           name: nexus-groovy
+          defaultMode: 0777
       - name: shell
         configMap:
           name: nexus-shell
+          defaultMode: 0777
       - name: start-script
         configMap:
           name: nexus-start-script
