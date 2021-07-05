@@ -1,6 +1,6 @@
 #!/bin/bash
 
-exec apt install unzip
+exec apt-get install unzip
 
 cd /opt/sonatype/nexus
 exec curl -s "https://get.sdkman.io" | sh &&  \
