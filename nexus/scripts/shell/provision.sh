@@ -1,6 +1,12 @@
 set -e
 set -u
 
+curl -s "https://get.sdkman.io" | sh 
+chmod a+x "/opt/sonatype/nexus/.sdkman/bin/sdkman-init.sh"
+source "/opt/sonatype/nexus/.sdkman/bin/sdkman-init.sh" 
+sdk install groovy
+
+
 username=admin
 password=`cat /nexus-data/admin.password`
 host=http://localhost:8081
