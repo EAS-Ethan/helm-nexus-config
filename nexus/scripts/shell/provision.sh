@@ -8,7 +8,7 @@ host=http://localhost:8081
 function addAndRunScript {
   name=$1
   file=$2
-  java -jar opt/sonatype/nexus/system/org/codehaus/groovy/groovy-all/2.4.17/groovy-all-2.4.17.jar -Dgroovy.grape.report.downloads=true -Dgrape.config=/config/helpers/grapeConfig.xml /config/helpers/addUpdateScript.groovy -u "$username" -p "$password" -n "$name" -f "$file" -h "$host"
+  java -jar /opt/sonatype/nexus/system/org/codehaus/groovy/groovy-all/2.4.17/groovy-all-2.4.17.jar -Dgroovy.grape.report.downloads=true -Dgrape.config=/config/helpers/grapeConfig.xml /config/helpers/addUpdateScript.groovy -u "$username" -p "$password" -n "$name" -f "$file" -h "$host"
   printf "\nPublished $file as $name\n\n"
   curl -v -X POST -u $username:$password --header "Content-Type: text/plain" "$host/service/rest/v1/script/$name/run"
   printf "\nSuccessfully executed $name script\n\n\n"
