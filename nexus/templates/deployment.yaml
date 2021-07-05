@@ -34,6 +34,7 @@ spec:
       - name: start-script
         configMap:
           name: nexus-start-script
+          defaultMode: 0777
       - name: nexus-data
         persistentVolumeClaim:
           claimName: nexus
