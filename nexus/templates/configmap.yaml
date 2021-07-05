@@ -4,12 +4,12 @@ metadata:
   name: nexus
 data:
   docker.groovy: |-
-    {{ .Files.Get "scripts/groovy/docker.groovy" }}
+    {{ indent 4  .Files.Get "scripts/groovy/docker.groovy" }}
   golang.groovy: |-
-    {{ .Files.Get "scripts/groovy/golang.groovy" }}
+    {{ indent 4  .Files.Get "scripts/groovy/golang.groovy" }}
   ldap.groovy: |-
-    {{ .Files.Get "scripts/groovy/ldap.groovy" }}
+    {{ indent 4  .Files.Get "scripts/groovy/ldap.groovy" }}
   npm.groovy: |-
-    {{ .Files.Get "scripts/groovy/npm.groovy" }}
+    {{ indent 4  .Files.Get "scripts/groovy/npm.groovy" }}
   
 
