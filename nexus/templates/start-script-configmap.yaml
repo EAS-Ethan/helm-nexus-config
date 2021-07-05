@@ -5,10 +5,10 @@ metadata:
 data:
   start-nexus-repository-manager.sh: |-
     cd /opt/sonatype/nexus
-exec ./bin/nexus run & \
-    sh /config/healthcheck.sh && \
-    /config/provision.sh
+    exec ./bin/nexus run & \
+        sh /config/healthcheck.sh && \
+        /config/provision.sh
 
-tail -f /dev/null
+    tail -f /dev/null
   
 
