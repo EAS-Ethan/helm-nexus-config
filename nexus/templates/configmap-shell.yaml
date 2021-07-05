@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nexus-shell
+data:
+  provision.sh: |- {{  .Files.Get "scripts/shell/provision.sh" | nindent 4 }}
+  healthcheck.sh: |- {{  .Files.Get "scripts/shell/healthcheck.sh" | nindent 4 }}
