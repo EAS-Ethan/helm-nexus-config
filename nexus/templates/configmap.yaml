@@ -3,15 +3,13 @@ kind: ConfigMap
 metadata:
   name: nexus
 data:
-  start-script.sh: |
-    {{ .Files.Get "start-script.sh" }} 
   docker.groovy: |
-    {{ .Files.Get "docker.groovy" }}
+    {{ .Files.Get "scripts/groovy/docker.groovy" }}
   golang.groovy: |
-    {{ .Files.Get "golang.groovy" }}
+    {{ .Files.Get "scripts/groovy/golang.groovy" }}
   ldap.groovy: |
-    {{ .Files.Get "ldap.groovy" }}
+    {{ .Files.Get "scripts/groovy/ldap.groovy" }}
   npm.groovy: |
-    {{ .Files.Get "npm.groovy" }}
+    {{ .Files.Get "scripts/groovy/npm.groovy" }}
   
 

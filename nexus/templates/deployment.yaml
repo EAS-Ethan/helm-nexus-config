@@ -19,30 +19,21 @@ spec:
         imagePullPolicy: Never
         name: nexus
         volumeMounts:
-        - mountPath: /opt/sonatype/nexus
-          name: nexus-data
+        - mountPath: /opt/sonatype
+          name: start-script
+        - mountPath: /config
+          name: config
         ports:
         - containerPort: 8081
           name: http
           protocol: TCP
-      - args:
-        - sh
-        - /scripts/start-script.sh
-        image: busybox
-        imagePullPolicy: Never
-        command: []
-        name: sidecar1
-        resources: {}
-        tty: true
-        volumeMounts:
-        - mountPath: /scripts
-          name: scripts
-        - mountPath: /opt/sonatype/nexus
-          name: nexus-data
       volumes:
-      - name: scripts
+      - name: config
         configMap:
           name: nexus
+      - name: start-script
+        configMap:
+          name: nexus-start-script
       - name: nexus-data
         persistentVolumeClaim:
           claimName: nexus
