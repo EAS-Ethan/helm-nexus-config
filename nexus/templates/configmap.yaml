@@ -1,7 +1,17 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: nexus-configmap
+  name: nexus
 data:
-  script.sh: {{ .Files.Get "script2.sh"}} 
+  start-script.sh: |
+    {{ .Files.Get "start-script.sh" }} 
+  docker.groovy: |
+    {{ .Files.Get "docker.groovy" }}
+  golang.groovy: |
+    {{ .Files.Get "golang.groovy" }}
+  ldap.groovy: |
+    {{ .Files.Get "ldap.groovy" }}
+  npm.groovy: |
+    {{ .Files.Get "npm.groovy" }}
   
+
