@@ -4,11 +4,4 @@ metadata:
   name: nexus-start-script
 data:
   start-nexus-repository-manager.sh: |-
-    cd /opt/sonatype/nexus
-    exec ./bin/nexus run & \
-        sh /config/healthcheck.sh && \
-        /config/provision.sh
-
-    tail -f /dev/null
-  
-
+    {{ .Files.Get "scripts/shell/start-nexus-repository-manager.sh" | indent 4 }} 
