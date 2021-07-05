@@ -21,16 +21,21 @@ spec:
         volumeMounts:
         - mountPath: /opt/sonatype
           name: start-script
-        - mountPath: /config
-          name: config
+        - mountPath: /config/scripts
+          name: groovy
+        - mountPath: /config/shell
+          name: shell
         ports:
         - containerPort: 8081
           name: http
           protocol: TCP
       volumes:
-      - name: config
+      - name: groovy
         configMap:
-          name: nexus
+          name: nexus-groovy
+      - name: shell
+        configMap:
+          name: nexus-shell
       - name: start-script
         configMap:
           name: nexus-start-script
