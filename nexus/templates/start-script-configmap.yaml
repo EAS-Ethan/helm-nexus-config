@@ -3,5 +3,4 @@ kind: ConfigMap
 metadata:
   name: nexus-start-script
 data:
-  start-nexus-repository-manager.sh: |
-    {{ .Files.Get "scripts/shell/start-nexus-repository-manager.sh" | indent 4 }} 
+  start-nexus-repository-manager.sh: "{{ .Files.Get "scripts/shell/start-nexus-repository-manager.sh" | indent 4 }}"
