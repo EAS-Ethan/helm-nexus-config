@@ -15,7 +15,7 @@ spec:
         app: nexus
     spec:
       containers:
-      - image: sonatype/nexus:latest
+      - image: sonatype/nexus:3.0.0
         securityContext:
           allowPrivilegeEscalation: false
           runAsUser: 0
