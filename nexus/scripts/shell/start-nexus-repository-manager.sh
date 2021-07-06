@@ -1,5 +1,7 @@
 #!/bin/bash
 cd /opt/sonatype/nexus
+
+mkdir -p "/nexus-data/etc/" && touch "/nexus-data/etc/nexus.properties"
 echo "nexus.scripts.allowCreation=true" >> /nexus-data/etc/nexus.properties
 
 
