@@ -16,7 +16,6 @@ spec:
     spec:
       containers:
       - image: sonatype/nexus3:3.31.0
-        imagePullPolicy: Never
         securityContext:
           allowPrivilegeEscalation: false
           runAsUser: 0
