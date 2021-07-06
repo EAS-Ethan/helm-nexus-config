@@ -3,6 +3,8 @@
 set -e
 set -u
 
+echo "nexus.scripts.allowCreation=true" >> /nexus-data/etc/nexus.properties
+
 username=admin
 password=`cat /nexus-data/admin.password`
 host=http://localhost:8081
