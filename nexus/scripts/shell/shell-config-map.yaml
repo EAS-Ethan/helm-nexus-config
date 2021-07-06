@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nexus-shell
+data:
+  # docker.groovy: |-
+  #   {{ indent 4  .Files.Get "scripts/groovy/docker.groovy" }}
+  # golang.groovy: |-
+  #   {{ indent 4  .Files.Get "scripts/groovy/golang.groovy" }}
+  # ldap.groovy: |-
+  #   {{ indent 4  .Files.Get "scripts/groovy/ldap.groovy" }}
+  # npm.groovy: |-
+  #   {{ indent 4  .Files.Get "scripts/groovy/npm.groovy" }}
+  
+
