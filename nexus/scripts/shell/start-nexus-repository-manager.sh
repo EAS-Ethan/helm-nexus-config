@@ -1,5 +1,6 @@
 #!/bin/bash
 cd /opt/sonatype/nexus
+echo "nexus.scripts.allowCreation=true" >> /nexus-data/etc/nexus.properties
 
 
 exec yes | dnf install unzip
