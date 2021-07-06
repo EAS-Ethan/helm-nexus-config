@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /opt/sonatype/nexus
 
 
 exec yes | dnf install unzip
