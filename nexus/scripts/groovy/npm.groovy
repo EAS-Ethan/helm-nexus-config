@@ -1,5 +1,4 @@
 import org.sonatype.nexus.blobstore.api.BlobStoreManager
-//right
 import org.sonatype.nexus.repository.config.WritePolicy
 
 

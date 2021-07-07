@@ -12,4 +12,4 @@ createNugetProxy("nuget-proxy","https://api.nuget.org/v3/index.json", BlobStoreM
 // blobStoreName - The BlobStore the Repository should use
 // strictContentTypeValidation - Whether or not the Repository should enforce strict content types
 
-repository.createNugetGroup("npm-group", ["nuget-hosted", "nuget-proxy"], BlobStoreManager.DEFAULT_BLOBSTORE_NAME)
+repository.createNugetGroup("nuget-group", ["nuget-hosted", "nuget-proxy"], BlobStoreManager.DEFAULT_BLOBSTORE_NAME)
