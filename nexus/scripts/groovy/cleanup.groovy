@@ -35,6 +35,6 @@ createPolicy('npmCleanupPolicy', 'npm')
 createPolicy('nugetCleanupPolicy', 'nuget')
 
 attachPolicy('dockerCleanupPolicy', 'docker-internal')
-attachPolicy('npmCleanupPolicy', 'npm-hosted')
-attachPolicy('nugetCleanupPolicy', 'nuget-hosted')
+// attachPolicy('npmCleanupPolicy', 'npm-hosted')
+// attachPolicy('nugetCleanupPolicy', 'nuget-hosted')
 
