@@ -7,3 +7,4 @@ data:
   nuget.groovy: |- {{  .Files.Get "scripts/groovy/nuget.groovy" | nindent 4 }}
   npm.groovy: |- {{  .Files.Get "scripts/groovy/npm.groovy" | nindent 4 }}
   security.groovy: |- {{  .Files.Get "scripts/groovy/security.groovy" | nindent 4 }}
+  ldap.groovy: |- {{  .Files.Get "scripts/groovy/ldap.groovy" | nindent 4 }}
