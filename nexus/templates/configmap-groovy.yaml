@@ -9,3 +9,4 @@ data:
   security.groovy: |- {{  .Files.Get "scripts/groovy/security.groovy" | nindent 4 }}
   ldap.groovy: |- {{  .Files.Get "scripts/groovy/ldap.groovy" | nindent 4 }}
   cleanup.groovy: |- {{  .Files.Get "scripts/groovy/cleanup.groovy" | nindent 4 }}
+  realms.groovy: |- {{  .Files.Get "scripts/groovy/realms.groovy" | nindent 4 }}
