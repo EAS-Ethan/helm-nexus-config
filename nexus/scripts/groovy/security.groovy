@@ -8,8 +8,8 @@ def dockerPrivileges = [
 security.addRole('docker', 'docker', 'docker role', dockerPrivileges, ['nx-anonymous'])
 
 // use the new role to create a user 
-def devRoles = ['docker']
-def johnDoe = security.addUser('docker', 'docker', 'docker', 'docker@example.com', true, 'Renegade187!', devRoles)
+def dockerRoles = ['docker']
+def dockerUser = security.addUser('docker', 'docker', 'docker', 'docker@example.com', true, 'Renegade187!', dockerRoles)
 
 
 
@@ -22,8 +22,8 @@ def npmPrivileges = [
 security.addRole('npm', 'npm', 'npm role', npmPrivileges, ['nx-anonymous'])
 
 // use the new role to create a user 
-def devRoles = ['npm']
-def johnDoe = security.addUser('npm', 'npm', 'npm', 'npm@example.com', true, 'Renegade187!', devRoles)
+def npmRoles = ['npm']
+def npmUser = security.addUser('npm', 'npm', 'npm', 'npm@example.com', true, 'Renegade187!', npmRoles)
 
 
 
@@ -37,5 +37,5 @@ def nugetPrivileges = [
 security.addRole('nuget', 'nuget', 'nuget role', nugetPrivileges, ['nx-anonymous'])
 
 // use the new role to create a user 
-def devRoles = ['nuget']
-def johnDoe = security.addUser('nuget', 'nuget', 'nuget', 'nuget@example.com', true, 'Renegade187!', devRoles)
+def nugetRoles = ['nuget']
+def nugetUser = security.addUser('nuget', 'nuget', 'nuget', 'nuget@example.com', true, 'Renegade187!', nugetRoles)
