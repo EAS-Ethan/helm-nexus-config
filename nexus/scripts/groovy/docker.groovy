@@ -53,6 +53,6 @@ def attachPolicy (dockerPolicy, docker) {
 }
 
 createPolicy('dockerCleanupPolicy')
-attachPolicy('dockerCleanupPolicy', 'docker-docker')
+attachPolicy('dockerCleanupPolicy', 'docker')
 
 log.info('Script dockerRepositories completed successfully')
