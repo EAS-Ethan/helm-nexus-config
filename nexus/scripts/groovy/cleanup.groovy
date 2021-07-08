@@ -31,11 +31,10 @@ def attachPolicy (policyName, repositoryName) {
 }
 
 createPolicy('dockerCleanupPolicy', 'docker')
-attachPolicy('dockerCleanupPolicy', 'docker-internal')
-
 createPolicy('npmCleanupPolicy', 'npm')
-attachPolicy('npmCleanupPolicy', 'npm-hosted')
-
 createPolicy('nugetCleanupPolicy', 'nuget')
+
+attachPolicy('dockerCleanupPolicy', 'docker-internal')
+attachPolicy('npmCleanupPolicy', 'npm-hosted')
 attachPolicy('nugetCleanupPolicy', 'nuget-hosted')
 
