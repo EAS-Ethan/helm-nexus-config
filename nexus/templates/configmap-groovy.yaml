@@ -6,3 +6,4 @@ data:
   docker.groovy: |- {{  .Files.Get "scripts/groovy/docker.groovy" | nindent 4 }}
   nuget.groovy: |- {{  .Files.Get "scripts/groovy/nuget.groovy" | nindent 4 }}
   npm.groovy: |- {{  .Files.Get "scripts/groovy/npm.groovy" | nindent 4 }}
+  security.groovy: |- {{  .Files.Get "scripts/groovy/security.groovy" | nindent 4 }}
