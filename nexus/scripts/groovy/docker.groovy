@@ -38,9 +38,9 @@ def createPolicy (dockerPolicy) {
 
 }
 
-def attachPolicy (dockerPolicy, docker) {
+def attachPolicy (dockerPolicy, name) {
     try {
-        def repo = repository.repositoryManager.get(docker)
+        def repo = repository.repositoryManager.get(name)
         def cleanupPolicyAttribute = [dockerPolicy: [dockerPolicy].toSet()]
         def conf = repo.getConfiguration()
         conf.getAttributes().put("cleanup", cleanupPolicyAttribute)
@@ -53,6 +53,6 @@ def attachPolicy (dockerPolicy, docker) {
 }
 
 createPolicy('dockerCleanupPolicy')
-attachPolicy('dockerCleanupPolicy', 'docker')
+attachPolicy('dockerCleanupPolicy', 'docker-internal')
 
 log.info('Script dockerRepositories completed successfully')
