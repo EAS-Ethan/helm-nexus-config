@@ -1,8 +1,6 @@
 import groovy.json.JsonSlurper
 import org.sonatype.nexus.security.realm.RealmManager
 
-parsed_args = new JsonSlurper().parseText(args)
-
 realmManager = container.lookup(RealmManager.class.getName())
 
 // enable/disable the NuGet API-Key Realm
