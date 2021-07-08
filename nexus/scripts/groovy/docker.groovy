@@ -55,6 +55,7 @@ def attachPolicy (policyName, repositoryName) {
 }
 
 createPolicy('dockerCleanupPolicy', 'docker')
+sleep(1000)
 attachPolicy('dockerCleanupPolicy', 'docker-internal')
 
 

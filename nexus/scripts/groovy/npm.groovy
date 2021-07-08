@@ -42,7 +42,7 @@ def attachPolicy (policyName, repositoryName) {
 }
 
 createPolicy('npmCleanupPolicy', 'npm')
-
+sleep(1000)
 attachPolicy('npmCleanupPolicy', 'npm-hosted')
 
 

@@ -49,6 +49,7 @@ def attachPolicy (policyName, repositoryName) {
 }
 
 createPolicy('nugetCleanupPolicy', 'nuget')
+sleep(1000)
 attachPolicy('nugetCleanupPolicy', 'nuget-hosted')
 
 
