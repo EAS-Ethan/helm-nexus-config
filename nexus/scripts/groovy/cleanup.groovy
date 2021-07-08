@@ -1,3 +1,5 @@
+import org.sonatype.nexus.cleanup.storage.CleanupPolicyStorage
+
 def createPolicy (policyName, policyFormat) {
     try {
         def policyStorage = container.lookup(CleanupPolicyStorage.class.getName())

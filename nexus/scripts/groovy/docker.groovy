@@ -1,5 +1,4 @@
 import org.sonatype.nexus.blobstore.api.BlobStoreManager
-import org.sonatype.nexus.cleanup.storage.CleanupPolicyStorage
 
 // create hosted repo and expose via https to allow deployments
 repository.createDockerHosted('docker-internal', 5000, null) 
