@@ -38,10 +38,10 @@ def createPolicy (dockerPolicy) {
 
 }
 
-def attachPolicy (dockerPolicy, name) {
+def attachPolicy (policyName, repositoryName) {
     try {
-        def repo = repository.repositoryManager.get(name)
-        def cleanupPolicyAttribute = [dockerPolicy: [dockerPolicy].toSet()]
+        def repo = repository.repositoryManager.get(repositoryName)
+        def cleanupPolicyAttribute = [policyName: [policyName].toSet()]
         def conf = repo.getConfiguration()
         conf.getAttributes().put("cleanup", cleanupPolicyAttribute)
         repo.stop()
