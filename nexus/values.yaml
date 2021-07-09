@@ -1,6 +1,6 @@
 deployment:
   replicas: 1
-  image: sonatype/nexus3
+  image: sonatype/nexus3:3.29.2
 
 
 ingress:
