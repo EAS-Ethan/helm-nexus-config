@@ -8,5 +8,5 @@ spec:
   resources:
     requests:
       storage: {{ .Values.pvc.storage }}
-  storageClassName: vsphere-thin
+  storageClassName: {{ .Values.pvc.storageClassName }}
   volumeMode: Filesystem
