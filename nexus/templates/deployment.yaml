@@ -5,7 +5,7 @@ metadata:
     app: nexus
   name: nexus
 spec:
-  replicas: 1
+  replicas: {{ .Values.deployment.replicas }}
   selector:
     matchLabels:
       app: nexus
@@ -13,9 +13,9 @@ spec:
     metadata:
       labels:
         app: nexus
-    spec:
+    spec: 
       containers:
-      - image: sonatype/nexus3
+      - image: {{ .Values.deployment.image }}
         securityContext:
           allowPrivilegeEscalation: false
           runAsUser: 0
