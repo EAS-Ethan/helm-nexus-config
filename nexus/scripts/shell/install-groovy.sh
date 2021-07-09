@@ -6,4 +6,4 @@ exec curl -s get.sdkman.io | bash &&  \
     source "/root/.sdkman/bin/sdkman-init.sh" && \
     echo "sdkman_auto_answer=true" > ~/.sdkman/etc/config && \
     sdk install java && \
-    sdk install groovy &
+    sdk install groovy 
