@@ -20,7 +20,7 @@ function addAndRunScript {
 
 printf "Provisioning Integration API Scripts Starting \n\n" 
 printf "Publishing and executing on $host\n"
-sleep 20000
+sleep 20
 for f in /config/scripts/*.groovy; do
     s=${f%.*}
     filename=${s##*/}
