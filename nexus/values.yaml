@@ -2,10 +2,8 @@ deployment:
   replicas: 1
   image: sonatype/nexus3:3.29.2
 
-
 ingress:
   hostname: nexus.easlab.co.uk
-
 
 pvc:
   storage: 20Gi
