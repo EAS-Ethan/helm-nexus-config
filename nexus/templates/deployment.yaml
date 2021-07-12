@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: nexus
-  name: nexus
+  name: {{ .Values.deployment.name }}
 spec:
   replicas: {{ .Values.deployment.replicas }}
   selector:
@@ -56,4 +56,4 @@ spec:
       - name: nexus-data
         persistentVolumeClaim:
           claimName: nexus
-      restartPolicy: Always
+      restartPolicy: {{ .Values.deployment.restartPolicy }}

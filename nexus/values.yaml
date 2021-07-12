@@ -1,6 +1,8 @@
 deployment:
+  name: nexus
   replicas: 1
   image: sonatype/nexus3:3.29.2
+  restartPolicy: Always
 
 ingress:
   hostname: nexus.easlab.co.uk
@@ -8,5 +10,3 @@ ingress:
 pvc:
   storage: 20Gi
   storageClassName: vsphere-thin
-
-  
