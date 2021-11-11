@@ -9,4 +9,4 @@ ingress:
 
 pvc:
   storage: 20Gi
-  storageClassName: vsphere-thin
+  # storageClassName: vsphere-thin
